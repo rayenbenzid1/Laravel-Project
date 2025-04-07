@@ -11,6 +11,7 @@ class contactController extends Controller
     {
         $contact = new Contact();
         $msg = $contact->messageWelcome();
-        return view(view: 'contact', data: ['message' => $msg]);
+        $details = ['10%', '20%', '30%'];
+        return view(view: 'contact', data: ['message' => $msg, 'details' => $details]);
     }
 }
